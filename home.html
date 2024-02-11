@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Claude Monet</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class = "grid-container">
+            <!-- HEADER -->
+            <div class="grid-header" id="navbar">
+                <nav>
+                    <ul class="sidebar">
+                        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                        <li><a class="btn active" href="home.html">Home</a></li>
+                        <li><a class="btn" href="about.html">About</a></li>
+                    </ul>
+                    <ul>
+                        <li class="hideOnMobile"><a class="btn active" href="#">Home</a></li>
+                        <li class="hideOnMobile"><a class="btn" href="about.html">About Claude Monet</a></li>
+                        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+             <!-- MAIN -->
+            <div class="grid-main">
+                <span id="grid-main-text">The Masterpieces of Claude Monet</span>
+                <div class="gallery">
+                    <div class="gallery-image" onclick="openModal('Impression, Sunrise', '1872', '', 'images/sunrise.jpeg')">
+                        <img src="images/sunrise.jpeg">
+                        <div>Impression, Sunrise</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Bridge over a Pond of Water Lilies', '1899', '', 'images/bridge.jpeg')">
+                        <img src="images/bridge.jpeg">
+                        <div>Bridge over a Pond of Water Lilies</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Camille Monet on a Garden Bench', '1873', '', 'images/camille.jpeg')">
+                        <img src="images/camille.jpeg">
+                        <div>Camille Monet on a Garden Bench</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('The Frog Pond', '1869', '', 'images/lagrenou.jpeg')">
+                        <img src="images/lagrenou.jpeg">
+                        <div>The Frog Pond</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Parasol', '1886', '', 'images/parasol.jpeg')">
+                        <img src="images/parasol.jpeg">
+                        <div>Parasol</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Saint-Lazare Station', '1877', '', 'images/station.jpeg')">
+                        <img src="images/station.jpeg">
+                        <div>Saint-Lazare Station</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('San Giorgio Maggiore at Dusk', '1908', '', 'images/sangiorgio.jpeg')">
+                        <img src="images/sangiorgio.jpeg">
+                        <div>San Giorgio Maggiore at Dusk</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Water Lilies', '1919', '', 'images/waterlily.jpeg')">
+                        <img src="images/waterlily.jpeg">
+                        <div>Water Lilies</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('The Houses of Parliament', '1903-4', '', 'images/parliament.jpeg')">
+                        <img src="images/parliament.jpeg">
+                        <div>The Houses of Parliament</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('The Bodmer Oak, Fontainebleau Forest', '1865', '', 'images/bodmeroak.jpeg')">
+                        <img src="images/bodmeroak.jpeg">
+                        <div>The Bodmer Oak, Fontainebleau Forest</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Garden at Sainte-Adresse', '1867', '', 'images/garden.jpeg')">
+                        <img src="images/garden.jpeg">
+                        <div>Garden at Sainte-Adresse</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('Regatta at Sainte-Adresse', '1867', '', 'images/regatta.jpeg')">
+                        <img src="images/regatta.jpeg">
+                        <div>Regatta at Sainte-Adresse</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('The Parc Monceau', '1878', '', 'images/parc.jpeg')">
+                        <img src="images/parc.jpeg">
+                        <div>The Parc Monceau</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('View of Vétheuil', '1880', '', 'images/vetheuil.jpeg')">
+                        <img src="images/vetheuil.jpeg">
+                        <div>View of Vétheuil</div>
+                    </div>
+                    
+                    <div class="gallery-image" onclick="openModal('The Manneporte near Étretat', '1886', '', 'images/manneporte.jpeg')">
+                        <img src="images/manneporte.jpeg">
+                        <div>The Manneporte near Étretat</div>
+                    </div>
+                </div>
+
+                <p id="quote">“People discuss my art and pretend to understand as if it were necessary to understand when it’s simply necessary to love.” — Claude Monet</p>
+
+            </div>
+
+            <!-- MODAL -->
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <img id="modal-image">
+                    <div class="modal-details">
+                        <p id="modal-title"></p>
+                        <p id="modal-year"></p>
+                        <p id="modal-description"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER -->
+            <div class = "grid-footer">
+                <a id="moveToTopBtn" href="#" class="back-to-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="#ffffff" d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+                </a>
+                <div class="footer-section">
+                    <h2>Contact Us</h2>
+                    <p>Email: info@claude-monet-art.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

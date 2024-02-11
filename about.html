@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Claude Monet</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class = "grid-container">
+            <!-- HEADER -->
+            <div class="grid-header" id="navbar">
+                <nav>
+                    <ul class="sidebar">
+                        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                        <li><a class="btn" href="home.html">Home</a></li>
+                        <li><a class="btn active" href="about.html">About</a></li>
+                    </ul>
+                    <ul>
+                        <li class="hideOnMobile"><a class="btn" href="home.html">Home</a></li>
+                        <li class="hideOnMobile"><a class="btn active" href="about.html">About Claude Monet</a></li>
+                        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- MAIN -->
+            <div class="grid-main">
+                <p class="monet-title">Claude Monet</p>
+                <hr>
+                <div class="tabs">
+                    <button class="tablinks active" onclick="openTab(event, 'biography')">Biography</button>
+                    <button class="tablinks" onclick="openTab(event, 'legacy')">Legacy</button>
+                </div>
+                
+                <div class="flex-about-content">
+                    <img src="images/monet.jpg" alt="Claude Monet" class="about-main-image">
+
+                    <div id="biography" class="tabcontent active">
+                        <h2>Biography</h2><br>
+                        <p>Claude Monet, born on November 14, 1840, in Paris, France, emerged as one of the most influential figures in the art world during the 19th century. Raised in Le Havre, a coastal town in Normandy, Monet demonstrated a remarkable talent for drawing and painting from a young age. Despite facing resistance from his family, who hoped he would pursue a more traditional career path, Monet's passion for art remained undeterred. Encouraged by his mother, he received informal training from local artists and developed his distinctive style.</p>
+                        <p>In his late teens, Monet moved to Paris to pursue formal artistic education, studying at renowned art academies and galleries. It was during this time that he befriended other young artists who shared his innovative approach to painting, forming the foundation of the Impressionist movement. Influenced by the changing landscapes of modernity and inspired by the works of earlier masters like Eugene Boudin and Gustave Courbet, Monet began to experiment with capturing the fleeting effects of light and atmosphere in his paintings.</p>
+                        <p>Monet's early career was marked by financial struggles as he sought recognition for his work. Despite facing rejection from traditional art institutions and critics, he remained steadfast in his commitment to his artistic vision. His breakthrough came with the painting "Impression, Sunrise," which not only gave the Impressionist movement its name but also established Monet as a leading figure in the avant-garde art scene.</p>
+                        <p>Throughout his life, Monet continued to push the boundaries of artistic expression, dedicating himself to capturing the beauty of the natural world in all its forms. He embarked on a lifelong exploration of light, color, and perception, often painting the same subjects multiple times to observe changes in atmospheric conditions and seasonal variations.</p>
+                        <p>Monet's personal life was also marked by significant events, including his marriage to Camille Doncieux, whom he depicted in many of his paintings, and the birth of their son, Jean. Tragically, Camille's untimely death and the challenges of raising a family amidst financial difficulties tested Monet's resilience. Despite these hardships, he found solace in his art, channeling his emotions into his paintings and finding inspiration in the landscapes of Giverny, where he eventually settled.</p>
+                        <p>In his later years, Monet's artistic vision expanded, culminating in his iconic series of Water Lilies, which he painted in his garden at Giverny. These monumental works, characterized by their monumental scale and ethereal beauty, represent the culmination of Monet's lifelong pursuit of capturing the essence of nature. Today, Claude Monet's legacy endures as a testament to the power of art to transcend time and place, inspiring generations of artists and art lovers alike with its timeless beauty and profound emotional depth.</p>
+                    </div>
+            
+                    <div id="legacy" class="tabcontent">
+                        <h2>Legacy</h2><br>
+                        <h2>1. Artistic Innovation</h2>
+                        <p>Monet's pioneering use of loose brushwork, vibrant color palettes, and emphasis on capturing the fleeting effects of light and atmosphere revolutionized the way artists approached painting. His dedication to plein air painting, or painting outdoors, and his commitment to capturing the essence of nature inspired subsequent generations of artists to explore new artistic avenues and push the boundaries of traditional art forms.</p>
+                        <h2>2. Influence on Art Movements</h2>
+                        <p>Monet's work had a profound impact on the development of modern art movements, including Impressionism, Post-Impressionism, and beyond. His experimentation with color, form, and composition laid the groundwork for abstract and non-representational art in the 20th century. Artists such as Vincent van Gogh, Paul Cézanne, and Henri Matisse were among those who were inspired by Monet's innovative techniques and artistic vision.</p>
+                        <h2>3. Cultural Significance</h2>
+                        <p>Monet's paintings continue to captivate audiences worldwide with their timeless beauty and evocative power. His iconic series, such as Water Lilies, Haystacks, and Rouen Cathedral, remain celebrated as masterpieces of art history, influencing popular culture and inspiring countless reinterpretations in literature, film, and music. Monet's ability to evoke emotion through his brushstrokes and his ability to capture the essence of nature transcends time and place, resonating with viewers across generations.</p>
+                        <h2>4. Legacy in Art Education</h2>
+                        <p>Monet's legacy also extends to his role as a teacher and mentor to younger artists. Through his dedication to artistic experimentation and his commitment to artistic freedom, Monet inspired countless students to pursue their creative passions and explore new artistic possibilities. His influence can be seen in art education programs around the world, where his works continue to be studied and admired for their technical brilliance and artistic vision.</p>
+                    </div>
+                </div>
+            </div>
+           <!-- FOOTER -->
+           <div class = "grid-footer">
+            <a id="moveToTopBtn" href="#" class="back-to-top">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="#ffffff" d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+            </a>
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <p>Email: info@claude-monet-art.com</p>
+                <p>Phone: +1234567890</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
