@@ -97,7 +97,7 @@ function openModal(title, year, description, imageURL) {
         "200 cm × 180 cm (78.7 in × 70.9 in)<br>" +
         "<br>Musée de l'Orangerie, Paris, France" +
         "<br><br>Water Lilies is a series of paintings by Claude Monet, created between 1914 and 1926. These monumental artworks, which adorn the walls of the Musée de l'Orangerie in Paris, depict Monet's beloved water garden at his home in Giverny. The paintings capture the ever-changing reflections of light and color on the surface of the water, as well as the delicate beauty of the water lilies in bloom. With their large scale and immersive quality, the Water Lilies series offers viewers a contemplative and meditative experience, inviting them to lose themselves in the tranquility of nature.";
-    } else if (title === "The Bodmer oak, Fontainebleau Forest") {
+    } else if (title === "The Bodmer Oak, Fontainebleau Forest") {
         modalDescription.innerHTML = "Oil on canvas<br>" +
         "53 cm × 64 cm (20.9 in × 25.2 in)<br>" +
         "<br>Musée d'Orsay, Paris, France" +
@@ -124,17 +124,27 @@ function openModal(title, year, description, imageURL) {
         "<br><br>View of Vétheuil is a captivating painting by Claude Monet completed in 1880. It portrays a scenic view of the village of Vétheuil, situated along the banks of the Seine River. The painting captures the tranquility of the rural landscape, with charming houses nestled among lush trees and rolling hills. Monet's use of vibrant colors and expressive brushwork imbues the scene with a sense of life and movement, while the play of light and shadow adds depth and dimension to the composition.";
     } else if (title === "The Manneporte near Étretat") {
         modalDescription.innerHTML = "Oil on canvas<br>" +
-        "81 cm × 92 cm (31.9 in × 36.2 in)<br>" +
+        "65.4cm × 92.1 cm (25.7 in × 36.2 in)<br>" +
         "<br>Private Collection" +
         "<br><br>The Manneporte near Étretat is a striking painting by Claude Monet completed in 1886. It depicts the Manneporte, a natural rock formation near the coastal town of Étretat in Normandy, France. The painting captures the dramatic cliffs and arches of the Manneporte, towering over the turbulent waters of the English Channel. Monet's bold brushwork and dynamic composition convey the raw power and beauty of the natural landscape, while the subtle variations in color and light evoke the ever-changing moods of the sea.";
-    } else {
+    } else if (title === "Haystacks (Effect of Snow and Sun)") {
+        modalDescription.innerHTML = "Oil on canvas<br>" +
+        "81 cm × 92 cm (31.9 in × 36.2 in)<br>" +
+        "<br>The Met Fifth Avenue in Gallery 819" +
+        "<br><br>Haystacks (Effect of Snow and Sun) is one of a series of paintings by Claude Monet depicting haystacks in various weather conditions and times of day. Completed in 1891, this particular work captures the haystacks under the effects of snow and sunlight. Monet's meticulous observation of light and atmosphere is evident in the subtle shifts of color and tone across the snow-covered landscape. The warm hues of sunlight contrast with the cool shadows, creating a dynamic interplay of light and shadow. Through his loose brushwork and emphasis on capturing the fleeting effects of light, Monet transforms a simple rural scene into a study of the ephemeral beauty of nature.";
+    } else if (title === "The Four Trees") {
+        modalDescription.innerHTML = "Oil on canvas<br>" +
+        "81.9 cm ×  81.6cm (32.2 in × 32.1 in)<br>" +
+        "<br>The Met Fifth Avenue in Gallery 819" +
+        "<br><br>The Four Trees is a masterpiece by Claude Monet painted in 1891. In this painting, Monet depicts four slender poplar trees standing tall against the backdrop of a tranquil landscape. The delicate branches of the trees sway gently in the breeze, their leaves rustling softly in the wind. Monet's use of vibrant colors and bold brushstrokes captures the essence of the moment, conveying a sense of serenity and harmony with nature. Through his mastery of light and color, Monet infuses the scene with a timeless beauty, inviting viewers to immerse themselves in the tranquility of the countryside.";
+    } else{   
         modalDescription.innerHTML = "Description not available";
     }
 }
 
 // ABOUT TABS
 document.addEventListener("DOMContentLoaded", function() {
-    openTab(event, 'biography');
+    document.getElementById("biography").style.display = "block";
 });
 
 function openTab(evt, tabName) {

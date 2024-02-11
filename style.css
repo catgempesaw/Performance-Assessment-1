@@ -23,13 +23,17 @@ html{
     height: 100%;
     display: flex;
     align-items: center;
+    background-image: url('images/waterlily.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten ;
 }
 nav{
     flex: 1;
     text-align: right;
     font-family: "Open Sans";
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     font-size: 15px;
 }
@@ -49,7 +53,7 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #000000;
+    color: black;
 }
 nav a:hover{
     color: darkslategrey;
@@ -95,24 +99,28 @@ nav li .active{
     display: block;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
-.gallery{
-    width: 100%;
-    columns: 4;
-    column-gap: 7px;
-    padding: 50px;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 5px;
+    padding: 0 100px 0px 100px;
+    justify-items:center ;
 }
-.gallery-image{
+
+.gallery-image {
     position: relative;
     overflow: hidden;
-    margin-bottom: 7px;
 }
-.gallery-image img{
-    vertical-align: bottom;
+
+.gallery-image img {
     width: 100%;
     height: 100%;
-    border-radius: 3px;
+    object-fit: cover;
+    border-radius: 2px;
 }
+
 .gallery-image div{
     position: absolute;
     top: 0;
@@ -207,19 +215,26 @@ nav li .active{
     margin: auto;
     font-family: "Open Sans";
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     font-style: italic;
+    padding: 20px 10px 50px 10px;
 }
 .grid-container .grid-footer {
     grid-area: footer;
     font-family: "Open Sans";
     font-weight: 400;
     font-size: 12px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     height: 100%;
-    display: flex;
+    display: fixed;
     align-items: center;
-    padding: 10px;
+    padding: 100px;
+    background-image: url('images/waterlily.jpeg');
+    background-size: cover;
+    color: whitesmoke;
+    padding: 20px;
+}
+.grid-footer .footer-section{
+    text-align: center;
 }
 .back-to-top {
     display: none; 
@@ -240,51 +255,24 @@ nav li .active{
     background-color: #555;
 }
 
-@media (max-width: 1200px){
-    .gallery{
-        width: calc(100% - 40px);
-        columns: 3;
-    }
-}
-@media (max-width: 800px){
-    .gallery{
-        columns: 2;
-    }
-    .hideOnMobile{
-        display: none;
-    }
-    .menu-button{
-        display: block;
-    }
-    .modal-content{
-        flex-direction: column;
-    }
-    .modal-content img{
-        max-width: 100%;
-        max-height: 100%;
-        margin-right: 0;
-    }
-}
-@media (max-width: 400px){
-    .gallery{
-        columns: 1;
-    }
-    .sidebar{
-        width: 100%;
-    }
-}
-
 /* About Page */
+.grid-main-about{
+    padding: 50px;
+    grid-area: main;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans";
+}
 .monet-title{
     font-family: "Cinzel", serif;
     font-size: 40px;
     font-weight: 600;
     display: flex;
-    padding: 15px 0px 5px 50px;
+    padding: 0px 0px 5px 70px;
 }
 hr {
-    width: 80%;
-    margin-left: 45px;
+    width: 87%;
+    margin-left: 70px;
     align-items: center;
     justify-items: center;
 }
@@ -292,7 +280,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: left;
-    padding: 0px 0px 5px 50px;
+    padding: 0px 0px 5px 70px;
 }
 .tablinks {
     background-color: rgba(0, 0, 0, .05);
@@ -314,12 +302,12 @@ hr {
 .flex-about-content{
     margin-left: 45px;
     margin-right: 45px;
-    padding: 10px;
+    padding: 10px 0px 35px 25px;
     width:90%;
 }
 .about-main-image{
     float: right;
-    padding: 40px 0px 0px 15px;
+    padding: 60px 0px 0px 15px;
     max-width: 30%;
     border-radius: 2px;
 }
@@ -332,4 +320,30 @@ hr {
 }
 .tabcontent p{
     margin-bottom: 20px;
+}
+.tablinks.active {
+    background-color: palevioletred;
+}
+
+
+@media (max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .modal-content{
+        flex-direction: column;
+    }
+    .modal-content img{
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 0;
+    }
+}
+@media (max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
 }
