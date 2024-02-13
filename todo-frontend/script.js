@@ -33,7 +33,7 @@ function scrollFunction() {
     }
 }
 
-// MODAL
+// MODAL FUNCTION
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = 'none';
