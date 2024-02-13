@@ -57,11 +57,6 @@ function openModal(title, year, description, imageURL) {
         "48 cm × 63 cm (19 in × 24.8 in)<br>" +
         "<br>Musée Marmottan Monet, Paris, France" +
         "<br><br>Impression, Sunrise is a famous oil painting by Claude Monet, created in 1872. It is considered one of the earliest examples of Impressionism, a movement characterized by its emphasis on capturing the fleeting effects of light and atmosphere. The painting depicts the port of Le Havre at sunrise, with boats floating on the water and the sun breaking through the mist, casting a hazy glow over the scene. Monet's loose brushwork and use of vibrant colors evoke a sense of movement and immediacy, capturing the essence of the moment rather than precise details. Impression, Sunrise is widely regarded as a seminal work in the development of modern art and continues to inspire artists and art lovers around the world.";
-    } else if (title === "The Houses of Parliament") {
-        modalDescription.innerHTML =  "Oil on canvas<br>" +
-        "81.3 cm × 92.4 cm (32 in × 36.3 in)<br>" +
-        "<br>Musée Marmottan Monet, Paris, France" +
-        "<br><br>Claude Monet's Houses of Parliament series encapsulates the essence of Impressionism with its masterful portrayal of light and atmosphere. In these paintings, including the iconic The Houses of Parliament, Sunset, Monet captures the timeless elegance of London's architectural landmark against the backdrop of the River Thames. Through loose brushstrokes and vibrant colors, he conveys the fleeting effects of sunset, with the warm hues of the descending sun casting an ethereal glow upon the majestic facade of the Parliament building. The play of light and shadow creates a dynamic interplay between the structure and its surroundings, evoking a sense of movement and vitality. Monet's ability to translate the transient beauty of nature onto canvas immortalizes the scene, inviting viewers to immerse themselves in the timeless charm of this iconic urban landscape.";
     } else if (title === "Bridge over a Pond of Water Lilies") {
         modalDescription.innerHTML = "Oil on canvas<br>" +
         "130.2 cm × 89.5 cm (51.3 in × 35.2 in)<br>" +
