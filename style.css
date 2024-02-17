@@ -326,7 +326,15 @@ hr {
     background-color: grey;
     color: white;
 }
-
+.iframe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.iframe-container p{
+    margin-bottom: 0px;
+}
 
 @media (max-width: 800px){
     .hideOnMobile{
